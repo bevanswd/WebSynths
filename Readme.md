@@ -2,4 +2,4 @@
 
 This web-based synthesizer uses and integrates two distinct APis (gibberish.js & interface.js) created by Charlie Roberts
 
-view demo here: http://envixsynth.github.io/
+view/hear demo here: http://envixsynth.github.io/
