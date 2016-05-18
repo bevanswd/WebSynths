@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>Gibberish</title>
+  <script src="gibberish_scripts/gibberish.js"></script>
+  <script src="gibberish_scripts/synth_scripts/tests.js"></script>
+  
+</head>
+<body>
+<div id="header">
+    
+  run: <select onchange="console.log('RUNNING', this.options[this.selectedIndex].text); window[this.options[this.selectedIndex].text]();">
+    
+  	<option>clear</option>	
+    <!-- <option>test</option> -->
+  	<optgroup label="MODULATION">
+  		<option>vibratoTest</option>
+      <option>twoOscsOneMod</option>
+      <option>lineTest</option>
+  		<option>ADSRTest</option>
+      <option>ADSRTest2</option>      
+  	</optgroup>
+
+  	<optgroup label="EFFECTS">
+      <option>distortion</option>
+  		<option>ladderFilter</option>
+      <option>stateVariableFilter</option>
+      <option>biquadFilter</option>    
+  		<option>ringModulation</option>
+  		<option>decimator</option>
+  		<option>delay</option>
+  		<option>flanger</option>
+  		<option>vibrato</option>    
+  		<option>reverb</option>
+  		<option>bufferShuffler</option>
+      <option>granulator</option>    
+  	</optgroup>	
+	
+  	<optgroup label="GENERATORS">
+  		<option>input</option>
+  		<option>wavetable</option>              
+  		<option>bandLimitedPWM</option>  
+  		<option>synth</option>
+  		<option>polySynth</option>
+  		<option>FMTest</option>
+  		<option>polyFM</option>
+  		<option>karplusStrong</option>
+  		<option>polyKarplusStrong</option>
+  		<option>sampler</option>
+      <option>soundfont</option>	
+  		<option>synth2</option>
+      <option>monoSynth</option>
+      <option>tr808_emulation</option>
+  	</optgroup>
+  
+    <option>time_modulation(Reich)</option>  
+    <option>routingTest</option> 
+    <option>sequencerTest</option> 
+  
+  </select>
+</div>
+
+<pre id="input"></pre>
+</div>
+
+</div>
+<script>
+  ///* uncomment this line (restore block comment) to use with LAB.js
+  Gibberish.init(); 
+  codeTimeout = setTimeout(function() { 
+  	var codegen = document.getElementById("output");
+  	codegen.innerHTML = Gibberish.callbackString;
+  }, 2000);
+  //*/
+</script>
+</body>
+
+</html>
